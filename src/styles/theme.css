@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: 19 80 163;
+    --color-primary-hover: 15 64 131;
+    --color-background: 255 255 255;
+    --color-foreground: 0 0 0;
+    --color-card: 249 250 251;
+    --color-card-foreground: 0 0 0;
+    --color-muted: 243 244 246;
+    --color-muted-foreground: 107 114 128;
+    --color-border: 229 231 235;
+    --color-input: 229 231 235;
+    --color-success: 34 197 94;
+    --color-warning: 251 146 60;
+    --color-error: 239 68 68;
+  }
+
+  .dark {
+    --color-background: 17 24 39;
+    --color-foreground: 255 255 255;
+    --color-card: 31 41 55;
+    --color-card-foreground: 255 255 255;
+    --color-muted: 55 65 81;
+    --color-muted-foreground: 156 163 175;
+    --color-border: 55 65 81;
+    --color-input: 55 65 81;
+  }
+
+  * {
+    @apply border-[rgb(var(--color-border))];
+  }
+
+  body {
+    @apply bg-[rgb(var(--color-background))] text-[rgb(var(--color-foreground))];
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
